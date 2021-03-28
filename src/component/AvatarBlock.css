@@ -22,3 +22,12 @@
     height: 260px;
     width: 132px;
 }
+
+.component-hat {
+    background: url(img/hats/fedora.png) no-repeat;
+    position: absolute;
+    top: -134px;
+    left: -55px;
+    width: 120px;
+    height: 66px;
+}
