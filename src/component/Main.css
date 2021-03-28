@@ -1,0 +1,33 @@
+.component-main  {
+    position: absolute;
+    left: 0px;
+    top: 32px;  
+    right: 0px;
+    bottom: 0px;
+    background: url(img/background.jpg) center center fixed;
+    background-size: cover;
+}
+
+.section {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    min-width: 100px;
+    overflow: hidden;
+}
+
+.left {
+    left: 0px;
+    width: 400px;
+}
+
+.middle {
+    left: 416px;
+    right: 30%;
+    margin-right: 16px;
+}
+
+.right {
+    left: 70%;
+    right: 0px;
+}

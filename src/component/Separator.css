@@ -1,0 +1,18 @@
+.component-separator {
+    position: absolute;
+    z-index: 100;
+}
+
+.component-separator.horizontal {
+    background: url(img/horizontalSeparator.jpg) repeat-y;
+    width: 16px;
+    height: 100%;
+    z-index: 100;
+}
+
+.component-separator.vertical {
+    background: url(img/verticalSeparator.jpg) repeat-y;
+    overflow: hidden;
+    height: 16px;
+    width: 100%;
+}

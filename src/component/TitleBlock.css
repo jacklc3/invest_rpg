@@ -1,0 +1,15 @@
+.component-titleblock {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+}
+
+.component-title {
+    background: url(img/title.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    left: 53px;
+    height: 171px;
+    width: 294px;
+}

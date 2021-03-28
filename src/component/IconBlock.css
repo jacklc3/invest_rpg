@@ -1,0 +1,77 @@
+.component-iconblock {
+    position: relative;
+    top: 0px;
+    bottom: 100%;
+    width: 100%;
+}
+
+.icon-image.pig {
+    background: url("img/icon/pig.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.icon-image.bonsai {
+    background: url("img/icon/bonsai.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.icon-image.gem {
+    background: url("img/icon/gem.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.icon-image.ruby {
+    background: url("img/icon/ruby.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.icon-image.shield {
+    background: url("img/icon/shield.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.icon-section {
+    background: url(img/banner.png) no-repeat;
+    background-size: contain;
+    padding: 10px;
+    padding-left: 32px;
+    position: relative;
+    left: 32px;
+    width: 264px;
+    height: 72px;
+}
+
+.icon-anchor {
+    position: absolute;
+    top: 42px;
+    left: 80px;
+}
+
+.icon-image {
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    height: 48px;
+    width: 48px;
+}
+
+.icon-name {
+    position: absolute;
+    top: 18px;
+    left: 116px;
+    height: 20px;
+    width: 150px;
+}
+
+.icon-value {
+    position: absolute;
+    top: 40px;
+    left: 116px;
+    height: 20px;
+    width: 150px;
+}
