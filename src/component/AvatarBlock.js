@@ -15,8 +15,6 @@ export default class AvatarBlock extends React.Component {
           <div class="component-avatar"></div>
           <Hats />
         </div>
-        <p>The count is { count }</p>
-        
       </div>
     );
   }

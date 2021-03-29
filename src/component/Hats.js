@@ -1,5 +1,5 @@
 import "./Hats.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function importAll(r) {
     let images = {};
@@ -24,15 +24,19 @@ const Hats = () => {
     const initialCount = 0;
     const [count, setCount] = useState(initialCount);
     const hatsArr = ["archerHat", "bowlerHat", "catEars", "crown", "headphones", "jesterHat", "magicianHat", "purplePartyHat", "fedora", "halo"];
+    
+    useEffect(() => {
+      switch (count) {
+        case hatsArr.length -1: setCount(initialCount);
+        break;
+      }
+    });
+    
     return ( 
         <div className="hats">
-        <p>hello there { hatsArr[count] }</p>
-        <div className="hats-dash">
-        <button onClick={() => setCount(initialCount)}>Reset</button>
-        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
-        <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
-        </div>
-        <img src={ images[hatsArr[count]+'.png'].default } alt="an adventurers hat"/>
+        <button onClick={() => setCount(prevCount => prevCount + 1)}>
+          <img src={ images[hatsArr[count]+'.png'].default } alt="an adventurers hat"/>
+        </button>
         </div>
 
      );
