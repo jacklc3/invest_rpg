@@ -24,19 +24,29 @@ const Hats = () => {
     const initialCount = 0;
     const [count, setCount] = useState(initialCount);
     const hatsArr = ["archerHat", "bowlerHat", "catEars", "crown", "headphones", "jesterHat", "magicianHat", "purplePartyHat", "fedora", "halo"];
+   
+    //something like this. only problem now is it's not picking up the function change in render...
+    const nextHat = () => {
+      setCount(prevCount => prevCount + 1);
+     }
+  
+     const initialHat = () => {
+      setCount(initialCount);
+     }
+  
+     let hatButton = nextHat;
     
     useEffect(() => {
       switch (count) {
-        case hatsArr.length -1: setCount(initialCount);
+        default: hatButton = initialHat;
         break;
       }
+      console.log(hatButton);
     });
-
-    // maybe a fix is.. to make two function that have a callback function of setCount. one with setCount(prevCount => prevCount + 1) and the other with setCount(initialCount). then set the onclick value of the button between these two to reset the count and display the last object in the array 
     
     return ( 
         <div className="hats">
-        <button onClick={() => setCount(prevCount => prevCount + 1)}>
+        <button onClick={ hatButton }>
           <img src={ images[hatsArr[count]+'.png'].default } alt="an adventurers hat"/>
         </button>
         </div>
