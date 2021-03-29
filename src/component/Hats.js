@@ -31,6 +31,8 @@ const Hats = () => {
         break;
       }
     });
+
+    // maybe a fix is.. to make two function that have a callback function of setCount. one with setCount(prevCount => prevCount + 1) and the other with setCount(initialCount). then set the onclick value of the button between these two to reset the count and display the last object in the array 
     
     return ( 
         <div className="hats">
