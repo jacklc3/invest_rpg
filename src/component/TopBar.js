@@ -19,7 +19,7 @@ const rows = links.map( link => {
 export default class TopBar extends React.Component {
   render() {
     return (
-      <div class="component-topbar">{rows}</div>
+      <div className="component-topbar">{rows}</div>
     );
   }
 }

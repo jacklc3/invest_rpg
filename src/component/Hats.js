@@ -1,37 +1,32 @@
+import React from "react";
 import "./Hats.css";
-import { useState } from 'react';
 
-function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    console.log(images);
-    return images;
+export default class Hats extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {i: 0};
+
+    const r = require.context('./img/hats', false, /\.png$/);
+    // Not in use yet but should be very useful later
+    this.keys = r.keys().map(key => key.replace("./", "").split(".")[0]);
+    this.images = r.keys().map(key => r(key));
   }
-  
-const images = importAll(require.context('./img/hats', false, /\.(png|jpe?g|svg)$/));
 
-const Hats = () => {
-    const initialCount = 0;
-    const [count, setCount] = useState(initialCount);
-    const hatsArr = ["archerHat", "bowlerHat", "catEars", "crown", "headphones", "jesterHat", "magicianHat", "purplePartyHat", "fedora", "halo"];
-      
-    const switchItem = (arr) => e => {
-      switch (count) {
-      case arr.length - 1: setCount(initialCount);
-      break;
-      default: setCount(prevCount => prevCount + 1);
-      break;
-      }
-     }
-    
+  handleClick() {
+    if (this.state.i >= this.images.length - 1) {
+      this.setState({i: 0});
+    } else {
+      this.setState(state => ({i: state.i + 1}));
+    }
+  }
+
+  render() {
     return ( 
-        <div className="hats">
-        <button onClick={ switchItem(hatsArr) }>
-          <img src={ images[hatsArr[count]+'.png'].default } alt="an adventurers hat"/>
+      <div className="hats">
+        <button onClick={ this.handleClick.bind(this) }>
+          <img src={ this.images[this.state.i].default } alt="an adventurers hat"/>
         </button>
-        </div>
-
-     );
+      </div>
+    );
+  }
 }
- 
-export default Hats;

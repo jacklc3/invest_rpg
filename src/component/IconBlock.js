@@ -23,12 +23,12 @@ const rows = icons.map( icon => {
   ].join(" ");
 
   return (
-    <div class="icon-section">
-      <div class="icon-anchor">
-        <div class={className}/>
+    <div className="icon-section">
+      <div className="icon-anchor">
+        <div className={className}/>
       </div>
-      <div class="icon-name">{icon.name}</div>
-      <div class="icon-value">1000</div>
+      <div className="icon-name">{icon.name}</div>
+      <div className="icon-value">1000</div>
     </div>
   );
 })
@@ -36,7 +36,7 @@ const rows = icons.map( icon => {
 export default class IconBlock extends React.Component {
   render() {
     return (
-      <div class="component-iconblock">{rows}</div>
+      <div className="component-iconblock">{rows}</div>
     );
   }
 }
