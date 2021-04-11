@@ -23,7 +23,7 @@ const rows = icons.map( icon => {
   ].join(" ");
 
   return (
-    <div className="icon-section">
+    <div key={icon.symbol} className="icon-section">
       <div className="icon-anchor">
         <div className={className}/>
       </div>

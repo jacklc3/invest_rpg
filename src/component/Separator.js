@@ -11,7 +11,7 @@ export default class Separator extends React.Component {
     ].join(" ");
     
     this.style = {}
-    if (this.props.direction == "vertical") {
+    if (this.props.direction === "vertical") {
       this.style.top = this.props.position;
     } else {
       this.style.left = this.props.position;

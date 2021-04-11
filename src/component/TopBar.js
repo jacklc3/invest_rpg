@@ -10,7 +10,7 @@ const links = [
 
 const rows = links.map( link => {
   return (
-    <div>
+    <div key={link.name.toLowerCase()}>
       <a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
     </div>
   );
