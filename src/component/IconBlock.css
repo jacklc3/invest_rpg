@@ -5,36 +5,6 @@
     width: 100%;
 }
 
-.icon-image.pig {
-    background: url("img/icon/pig.png") no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-}
-
-.icon-image.bonsai {
-    background: url("img/icon/bonsai.png") no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-}
-
-.icon-image.gem {
-    background: url("img/icon/gem.png") no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-}
-
-.icon-image.ruby {
-    background: url("img/icon/ruby.png") no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-}
-
-.icon-image.shield {
-    background: url("img/icon/shield.png") no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-}
-
 .icon-section {
     background: url(img/banner.png) no-repeat;
     background-size: contain;
@@ -53,6 +23,8 @@
 }
 
 .icon-image {
+    background-position: 50% 50%;
+    background-size: contain;
     position: absolute;
     top: -24px;
     left: -24px;

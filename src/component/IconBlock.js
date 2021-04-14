@@ -1,42 +1,37 @@
 import React from "react";
 import "./IconBlock.css";
 
-function IconGenerator(name, symbol) {
-    return {
-        name: name,
-        symbol: symbol,
-        path: "img/icon/"+symbol+".png"
-    };
+const icon_map = {
+  pig: "Savings",
+  bonsai: "Financial Indep.",
+  gem: "Retirement Fund",
+  shield: "Risk Mangement",
+  ruby: "Rainy Day"
 }
 
-const icons = [
-    IconGenerator("Savings", "pig"),
-    IconGenerator("Financial Indep.", "bonsai"),
-    IconGenerator("Retirement Fund", "gem"),
-    IconGenerator("Risk Management", "shield")
-]
-
-const rows = icons.map( icon => {
-  const className = [
-    "icon-image",
-    icon.symbol
-  ].join(" ");
-
-  return (
-    <div key={icon.symbol} className="icon-section">
-      <div className="icon-anchor">
-        <div className={className}/>
-      </div>
-      <div className="icon-name">{icon.name}</div>
-      <div className="icon-value">1000</div>
-    </div>
-  );
-})
-
 export default class IconBlock extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const r = require.context('./img/icon', false, /\.png$/);
+
+    var images = {};
+    r.keys().forEach(key => (images[key.replace("./", "").split(".")[0]] = r(key)))
+
+    this.nodes = Object.keys(icon_map).map(key => (
+      <div key={key} className="icon-section">
+        <div className="icon-anchor">
+          <img src={ images[key].default } alt="an icon" className="icon-image"/>
+        </div>
+        <div className="icon-name">{icon_map[key]}</div>
+        <div className="icon-value">2000</div>
+      </div>
+    ))
+  }
+
   render() {
     return (
-      <div className="component-iconblock">{rows}</div>
+      <div className="component-iconblock">{this.nodes}</div>
     );
   }
 }
