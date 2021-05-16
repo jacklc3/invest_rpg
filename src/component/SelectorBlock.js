@@ -1,5 +1,6 @@
 import React from "react";
 import "./SelectorBlock.css";
+import Selector from './Selector';
 
 const outfit_map = {
   items: "yellow",
@@ -17,7 +18,6 @@ export default class SelectorBlock extends React.Component {
   handleClick(v) {
     if (this.state.outfit !== v) {
       this.setState({outfit: v});
-      console.log(v);
     }
   }
 
@@ -29,13 +29,8 @@ export default class SelectorBlock extends React.Component {
     });
 
     const frame_items = Object.entries(outfit_map).map( ([k, v]) => {
-      const _style = {
-        background: v,
-        display: this.state.outfit === k ? "inline" : "none"
-      };
-
       return (
-        <div className="component-selectorframe" style={_style} key={k}></div>
+        this.state.outfit === k && <Selector outfit={k} style={{background: v}} key={k}/>
       )
     });
 

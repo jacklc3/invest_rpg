@@ -5,7 +5,6 @@ import TopBar from './component/TopBar'
 import Main from './component/Main'
 import reportWebVitals from './reportWebVitals';
 
-var element = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
 ReactDOM.render(
   <React.StrictMode>
     <TopBar />

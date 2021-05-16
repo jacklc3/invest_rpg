@@ -1,13 +1,11 @@
-.hats > p {
-    color: white;
+.component-hats {
+    position: absolute;
+    top: -162px;
+    left: -40px;
 }
 
-.hats > button {
-    width: 200px;
-    height: 200px;
+.component-hats > img {
     position: absolute;
-    top: -220px;
-    left: -90px;
-    background: none;
-    border: none;
+    top: 0px;
+    left: 0px;
 }

@@ -4,28 +4,19 @@ import "./Hats.css";
 export default class Hats extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {i: 0};
 
-    const r = require.context('./img/hats', false, /\.png$/);
-    // Not in use yet but should be very useful later
-    this.keys = r.keys().map(key => key.replace("./", "").split(".")[0]);
-    this.images = r.keys().map(key => r(key));
-  }
+    const r = require.context('./img/avatar/hats', false, /\.png$/);
 
-  handleClick() {
-    if (this.state.i >= this.images.length - 1) {
-      this.setState({i: 0});
-    } else {
-      this.setState(state => ({i: state.i + 1}));
-    }
+    this.displays = {};
+    r.keys().forEach(k => this.displays[k.replace("./", "").split(".")[0]] = r(k));
+
+    this.state = {display: Object.keys(this.displays)[0]};
   }
 
   render() {
-    return ( 
-      <div className="hats">
-        <button onClick={ this.handleClick.bind(this) }>
-          <img src={ this.images[this.state.i].default } alt="an adventurers hat"/>
-        </button>
+    return (
+      <div className="component-hats">
+        <img src={ this.displays[this.state.display].default } alt="an adventurers hat"/>
       </div>
     );
   }

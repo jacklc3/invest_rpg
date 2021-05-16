@@ -1,0 +1,24 @@
+.component-selector > img {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    padding: 10px;
+}
+
+.component-selector {
+    position: absolute;
+    left: 0px;
+    top: 32px;
+    width: 100%;
+    height: 100%;
+}
+
+.component-background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}

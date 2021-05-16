@@ -1,5 +1,5 @@
 .component-avatarblock {
-    background: url(img/avatarBackground.jpg) no-repeat;
+    background: url(img/avatar/avatarBackground.jpg) no-repeat;
     position: absolute;
     height: 400px;
     width: 100%;
@@ -15,19 +15,10 @@
 }
 
 .component-avatar {
-    background: url(img/avatar.png) no-repeat;
+    background: url(img/avatar/avatar.png) no-repeat;
     position: absolute;
     top: -115px;
     left: -66px;
     height: 260px;
     width: 132px;
-}
-
-.component-hat {
-    background: url(img/hats/fedora.png) no-repeat;
-    position: absolute;
-    top: -134px;
-    left: -55px;
-    width: 120px;
-    height: 66px;
 }
