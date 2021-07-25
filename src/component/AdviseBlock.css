@@ -1,0 +1,25 @@
+.component-adviseblock {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+}
+
+.component-advisescroll {
+    background: url(img/scroll.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 100%;
+}
+
+.component-advisetext {
+    background-size: contain;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    right: 7%;
+    height: 100%;
+    font-size: small;
+}

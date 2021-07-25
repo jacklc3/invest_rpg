@@ -11,7 +11,7 @@
 }
 
 .component-separator.vertical {
-    background: url(img/verticalSeparator.jpg) repeat-y;
+    background: url(img/verticalSeparator.jpg) repeat-x;
     overflow: hidden;
     height: 16px;
     width: 100%;

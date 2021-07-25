@@ -5,6 +5,8 @@ import TitleBlock from './TitleBlock'
 import AvatarBlock from "./AvatarBlock";
 import IconBlock from "./IconBlock";
 import Separator from './Separator';
+import AdviseBlock from './AdviseBlock';
+import SelectorBlock from './SelectorBlock';
 
 export default class Main extends React.Component {
   render() {
@@ -17,7 +19,10 @@ export default class Main extends React.Component {
           <Separator direction="vertical" position="616px" />
         </div>
         <Separator direction="horizontal" position="400px" />
-        <div className="section middle"></div>
+        <div className="section middle">
+          <AdviseBlock />
+          <Separator direction="vertical" position="180px" />
+        </div>
         <Separator direction="horizontal" position="70%" />
         <div className="section right">
           <IconBlock />
