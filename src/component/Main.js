@@ -6,7 +6,6 @@ import AvatarBlock from "./AvatarBlock";
 import IconBlock from "./IconBlock";
 import Separator from './Separator';
 import AdviseBlock from './AdviseBlock';
-import SelectorBlock from './SelectorBlock';
 
 export default class Main extends React.Component {
   render() {
