@@ -12,10 +12,10 @@ export default class Main extends React.Component {
     super(props);
 
     this.state = {
-      item: "",
       hat: "archerHat",
-      aura: "",
-      boots: "",
+      aura: "aura_bluewhite_f",
+      item: "",
+      boots: "archerBoots",
     };
 
     this.callback = {
@@ -27,18 +27,12 @@ export default class Main extends React.Component {
   }
 
   render() {
-
-    console.log(this.state);
     return (
       <div className="component-main">
         <div className="section left">
           <TitleBlock />
           <Separator direction="vertical" position="200px" />
-          <AvatarBlock outfit={{
-            hat: this.state.hat,
-            item: this.state.item,
-            aura: this.state.aura,
-            boots: this.state.boots}} />
+          <AvatarBlock outfit={this.state} />
           <Separator direction="vertical" position="616px" />
           <SelectorBlock callback={this.callback}/>
         </div>

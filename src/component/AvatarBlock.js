@@ -1,6 +1,6 @@
 import React from "react";
 import "./AvatarBlock.css";
-import Hats from './Hats';
+import Outfit from './Outfit';
 
 export default class AvatarBlock extends React.Component {
   render() {
@@ -8,7 +8,18 @@ export default class AvatarBlock extends React.Component {
       <div className="component-avatarblock">
         <div className="component-avataranchor"> 
           <div className="component-avatar"></div>
-          <Hats outfit={this.props.outfit.hat}/>
+          <Outfit
+            outfit="hat"
+            instance={this.props.outfit.hat}
+            style={{top: "-162px", left: "-40px"}}/>
+          <Outfit
+            outfit="boots"
+            instance={this.props.outfit.boots}
+            style={{top: "100px", left: "-60px", width: "120px"}}/>
+          <Outfit
+              outfit="aura"
+              instance={this.props.outfit.aura}
+              style={{top: "-225px", left: "-245px", width: "500px"}}/>
         </div>
       </div>
     );
