@@ -21,7 +21,7 @@ export default class AdviseBlock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {i: 0};
-    setInterval(this.increment.bind(this), 1000);
+    setInterval(this.increment.bind(this), 10000);
   }
 
   increment() {
