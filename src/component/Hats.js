@@ -5,7 +5,7 @@ export default class Hats extends React.Component {
   constructor(props) {
     super(props);
 
-    const r = require.context('./img/avatar/hats', false, /\.png$/);
+    const r = require.context('./img/avatar/hat', false, /\.png$/);
 
     this.displays = {};
     r.keys().forEach(k => this.displays[k.replace("./", "").split(".")[0]] = r(k));
@@ -16,7 +16,7 @@ export default class Hats extends React.Component {
   render() {
     return (
       <div className="component-hats">
-        <img src={ this.displays[this.state.display].default } alt="an adventurers hat"/>
+        <img src={ this.displays[this.props.outfit].default } alt="an adventurers hat"/>
       </div>
     );
   }

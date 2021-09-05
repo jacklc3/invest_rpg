@@ -8,7 +8,7 @@ export default class AvatarBlock extends React.Component {
       <div className="component-avatarblock">
         <div className="component-avataranchor"> 
           <div className="component-avatar"></div>
-          <Hats />
+          <Hats outfit={this.props.outfit.hat}/>
         </div>
       </div>
     );

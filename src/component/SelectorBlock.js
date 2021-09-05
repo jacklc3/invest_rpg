@@ -3,9 +3,9 @@ import "./SelectorBlock.css";
 import Selector from './Selector';
 
 const outfit_map = {
-  items: "yellow",
-  auras: "turquoise",
-  hats: "purple",
+  hat: "purple",
+  item: "yellow",
+  aura: "turquoise",
   boots: "brown",
 };
 
@@ -16,21 +16,24 @@ export default class SelectorBlock extends React.Component {
   }
 
   handleClick(v) {
-    if (this.state.outfit !== v) {
-      this.setState({outfit: v});
-    }
+    this.setState({outfit: v});
   }
 
   render() {
-    const bar_items = Object.keys(outfit_map).map( k => {
+    const bar_items = Object.keys(this.props.callback).map( k => {
       return (
         <div key={k} onClick={ this.handleClick.bind(this, k) }>{ k.toUpperCase() }</div>
       );
     });
 
-    const frame_items = Object.entries(outfit_map).map( ([k, v]) => {
+    const frame_items = Object.keys(this.props.callback).map( k => {
       return (
-        this.state.outfit === k && <Selector outfit={k} style={{background: v}} key={k}/>
+        this.state.outfit === k
+          && <Selector
+            callback={this.props.callback[k]}
+            outfit={k}
+            style={{background: outfit_map[k]}}
+            key={k}/>
       )
     });
 

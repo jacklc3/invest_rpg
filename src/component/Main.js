@@ -8,15 +8,39 @@ import Separator from './Separator';
 import SelectorBlock from './SelectorBlock';
 
 export default class Main extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      item: "",
+      hat: "archerHat",
+      aura: "",
+      boots: "",
+    };
+
+    this.callback = {
+      hat: v => this.setState({hat: v}),
+      item: v => this.setState({item: v}),
+      aura: v => this.setState({aura: v}),
+      boots: v => this.setState({boots: v})
+    }
+  }
+
   render() {
+
+    console.log(this.state);
     return (
       <div className="component-main">
         <div className="section left">
           <TitleBlock />
           <Separator direction="vertical" position="200px" />
-          <AvatarBlock />
+          <AvatarBlock outfit={{
+            hat: this.state.hat,
+            item: this.state.item,
+            aura: this.state.aura,
+            boots: this.state.boots}} />
           <Separator direction="vertical" position="616px" />
-          <SelectorBlock />
+          <SelectorBlock callback={this.callback}/>
         </div>
         <Separator direction="horizontal" position="400px" />
         <div className="section middle"></div>
