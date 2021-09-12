@@ -12,21 +12,20 @@ export default class Outfit extends React.Component {
       boots: require.context('./img/avatar/boots', false, /\.png$/),
     }
 
-    console.log(props)
-
     this.displays = {};
     r[props.outfit].keys().forEach(k => this.displays[k.replace("./", "").split(".")[0]] = r[props.outfit](k));
     this.state = {display: Object.keys(this.displays)[0]};
   }
 
   render() {
-    console.log(this.props )
+    const className = [this.props.outfit, this.props.instance].join(' ');
+
     return (
       <div className="component-outfit">
         <img
-          src={ this.displays[this.props.instance].default }
-          alt="an adventurers outfit"
-          style={this.props.style}/>
+          className={className}
+          src={this.displays[this.props.instance].default}
+          alt="an adventurers outfit" />
       </div>
     );
   }

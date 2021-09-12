@@ -10,16 +10,13 @@ export default class AvatarBlock extends React.Component {
           <div className="component-avatar"></div>
           <Outfit
             outfit="hat"
-            instance={this.props.outfit.hat}
-            style={{top: "-162px", left: "-40px"}}/>
+            instance={this.props.outfit.hat} />
           <Outfit
             outfit="boots"
-            instance={this.props.outfit.boots}
-            style={{top: "100px", left: "-60px", width: "120px"}}/>
+            instance={this.props.outfit.boots} />
           <Outfit
-              outfit="aura"
-              instance={this.props.outfit.aura}
-              style={{top: "-225px", left: "-245px", width: "500px"}}/>
+            outfit="aura"
+            instance={this.props.outfit.aura} />
         </div>
       </div>
     );
